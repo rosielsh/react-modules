@@ -11,15 +11,13 @@ export default defineConfig({
       fileName: 'index',
     },
     rollupOptions: {
-      external: ['react'],
+      external: ['react', 'react-dom'],
       output: {
         globals: {
           react: 'React',
+          'react-dom': 'ReactDOM',
         },
       },
-    },
-    commonjsOptions: {
-      esmExternals: ['react'],
     },
   },
   plugins: [
@@ -27,6 +25,7 @@ export default defineConfig({
     dts({
       include: ['src/lib'],
       tsconfigPath: './tsconfig.app.json',
+      insertTypesEntry: true,
     }),
   ],
 });

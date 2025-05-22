@@ -1,6 +1,6 @@
 {
   "name": "@suhwa/react-modal",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "재사용 가능한 모달입니다.",
   "type": "module",
   "types": "dist/index.d.ts",
@@ -19,11 +19,13 @@
     "deploy": "vite build --base=/react-modules/ --minify=false && npx gh-pages -d dist",
     "chromatic": "npx chromatic --project-token=chpt_3248c2f54315348"
   },
-  "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
+  "peerDependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.6",
